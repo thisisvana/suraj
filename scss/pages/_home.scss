@@ -1,170 +1,28 @@
-// -----------------------------------------------------------------------------
-// This file contains styles that are specific to the home page.
-// -----------------------------------------------------------------------------
-.banner {
-  position: relative;
-  img {
-    width: 100%;
-  }
-  h1 {
-    color: $lw;
-    font-size: 4rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    position: absolute;
-    top: 35%;
-    left: 5%;
-    @media screen and (min-width: $tablet-min) and (max-width: $tablet-max){
-      font-size: 2rem;
-
-
-    }
-    @media screen and (max-width: $mobile-max){
-      font-size: 1.3rem;
-      width: 5rem;
-      top: 25%;
-
-    }
-  }
-  p {
-    position: absolute;
-    top: 42%;
-    left: 7%;
-    font-size: 2rem;
-    color: $lw;
-    @media screen and (min-width: $tablet-min) and (max-width: $tablet-max){
-      font-size: 1rem;
-      top: 44%;
-      left: 8%;
-
-    }
-    @media screen and (max-width: $mobile-max){
-      font-size: 1.2rem;
-      position: relative;
-      color: $mid-grey;
-
-    }
-  }
-  .btn-banner {
-    position: absolute;
-    top: 52%;
-    left: 7%;
-    @media screen and (min-width: $tablet-min) and (max-width: $tablet-max){
-      top: 55%;
-      left: 8%;
-
-
-    }
-    @media screen and (max-width: $mobile-max){
-      position: relative;
-      margin-bottom: 2rem;
-      color: $lw;
-      background-color: $btn-banner;
-      border: 0.1rem solid $btn-banner;
-      &:hover {
-        background-color: transparent;
-        color: $dark-grey;
-      }
-
-    }
-  }
-}
-
-.mission {
-  background-color: $bg-color;
-  padding: 8rem 14rem;
-  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max){
-    padding: 6rem;
-
-  }
-  @media screen and (max-width: $mobile-max){
-    padding: 2rem;
-  }
-}
-.head-hr {
-  margin: 0 0 3rem 1.3rem;
-  width: 5rem;
-  border: 0.2rem solid $brand-color;
-
-}
-.events {
-  background-color: $brand-color;
-  padding: 5rem;
-}
-.cta {
-  background-color: $lw;
-  padding: 8rem;
-  @media screen and (max-width: $mobile-max){
-    padding: 2rem;
-  }
-
-}
-.cta-btn {
-  padding: 2rem 1rem;
-}
-.contact-form {
-  padding: 4rem;
-  @media screen and (max-width: $mobile-max){
-    padding: 3rem;
-  }
-}
-.c-form {
-  width: 50%;
-  margin: auto;
-  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max){
-    width: 80%;
-
-  }
-  @media screen and (max-width: $mobile-max){
-    width: 100%;
-  }
-}
-.form-c {
+.works-container {
+  height: 50vh;
+  background-color: transparent;
   display: flex;
-  flex-direction: column;
-  input, textarea {
-    padding: 1rem;
-    border: none;
-    border-bottom: 0.1rem solid $bg-color;
+}
+.box {
+  display: flex;
+  margin: auto;
+  h1 {
+    color: $brand-color;
+    font-size: 2rem;
+    text-transform: uppercase;
   }
 }
-.btn-form {
-  margin: 2rem 0;
+.top-left {
+  // background-image: url("../img/banner.jpg");
+  background-color: $lw;
 }
-.services-icons {
-    list-style: none;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    h4 {
-      color: $lw;
-    }
-    // padding: 2rem;
-    li {
-      padding: 2rem;
-      flex: 1;
-      img{
-        width: 5rem;
-        @media screen and (min-width: $tablet-min) and (max-width: $tablet-max){
-          width: 3rem;
-        }
-        @media screen and (max-width: $mobile-max){
-          width: 3rem;
-          margin: auto;
-        }
-      }
-      @media screen and (max-width: $mobile-max){
-        padding: 1rem;
-      }
-
-    }
-    @media screen and (min-width: $tablet-min) and (max-width: $tablet-max){
-      justify-content: center;
-    }
-
-    @media screen and (max-width: $mobile-max){
-      flex-direction: column;
-      justify-content: center;
-
-    }
+.top-right {
+  // background-image: url("../img/dj.jpg");
+  background-color: $mid-grey;
+}
+.bottom-left {
+  background-color: $dark-grey;
+}
+.bottom-right {
+  background-color: $bg-color;
 }

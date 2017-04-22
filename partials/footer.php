@@ -1,5 +1,5 @@
 		<footer class="row expanded main-footer">
-			<div class="row">
+			<!-- <div class="row">
 					<div class="small-12 medium-12 large-4 column main-footer-address">
 						<h2>adress</h2>
 						<p>19834 Butternut Trail <br> Farmington, MN 55024</p>
@@ -21,7 +21,7 @@
 			</div>
 		</footer>
 		<footer class="row expanded sub-footer">
-			<p>&copy;2003-2016 Trustworthy Music. All rights reserved.</p>
+			<p>&copy;2003-2016 Trustworthy Music. All rights reserved.</p> -->
 		</footer>
 
 
