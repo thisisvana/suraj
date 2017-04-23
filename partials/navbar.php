@@ -11,9 +11,8 @@
     <div class="large-6 column">
       <nav class="main-nav">
         <ul class="main-menu">
+          <li><a href="index.php">Home</a></li>
           <li><a href="about.php">About</a></li>
-          <li><a href="works.php">Works</a></li>
-
           <li><a href="blog.php">Blog</a></li>
           <li><a href="contact.php">Contact</a></li>
         </ul>

@@ -429,6 +429,9 @@ a {
   text-decoration: none;
   display: block; }
 
+ul {
+  list-style: none; }
+
 /**
  * Foundation for Sites by ZURB
  * Version 6.3.0
@@ -2588,6 +2591,26 @@ body {
       .social-nav li a:hover {
         color: #9a7b22; }
 
+.page-footer {
+  margin: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+  .page-footer a {
+    color: #999999; }
+  @media screen and (min-width: 40rem) and (max-width: 63.9375rem) {
+    .page-footer {
+      flex-direction: column;
+      padding: 1rem 4rem;
+      background-color: #eeebeb; } }
+  @media screen and (max-width: 39.9375rem) {
+    .page-footer {
+      flex-direction: column;
+      padding: 1rem 4rem;
+      background-color: #eeebeb; } }
+  .page-footer .rights {
+    font-size: 0.8rem; }
+
 .btn {
   width: 10rem;
   padding: 1rem;
@@ -2636,6 +2659,9 @@ body {
     color: #999999;
     cursor: pointer; }
 
+.works {
+  padding: 0 3rem; }
+
 .works-container {
   height: 50vh;
   background-color: transparent;
@@ -2648,6 +2674,8 @@ body {
     color: #9a7b22;
     font-size: 2rem;
     text-transform: uppercase; }
+  .box h4 {
+    padding: 1rem; }
 
 .top-left {
   background-color: #eeebeb; }
@@ -2661,77 +2689,84 @@ body {
 .bottom-right {
   background-color: #2f3336; }
 
-.booking-form {
-  margin: 0 auto;
-  max-width: 800px; }
-  .booking-form input[type="text"], .booking-form input[type="email"], .booking-form input[type="time"], .booking-form input[type="date"], .booking-form select {
-    width: 100%;
-    padding: 1rem 0.5rem;
-    margin-bottom: 1rem; }
-  .booking-form input[type="checkbox"], .booking-form input[type="radio"] {
-    display: inline-block;
-    margin-right: 1rem; }
-  .booking-form input[type="submit"] {
-    width: 90%;
-    padding: 1rem;
-    margin: 2rem auto; }
-  .booking-form .submit-button {
-    text-align: center; }
+.panel {
+  height: 50vh;
+  position: relative; }
 
-.inner-banner {
-  position: relative;
-  height: 45vh;
-  overflow: hidden; }
-  .inner-banner img {
-    width: 100%; }
+.card {
+  width: 100%;
+  height: 100%;
+  transition: all .5s;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px; }
 
-.page-title {
-  padding: 1rem 3rem; }
-  .page-title p {
-    font-style: italic; }
+.front {
+  z-index: 2; }
 
-.packages {
-  padding: 2rem; }
-  @media screen and (min-width: 40rem) and (max-width: 63.9375rem) {
-    .packages {
-      padding: 1rem; } }
+.back {
+  z-index: 1;
+  transform: rotateX(-180deg); }
+
+.top-left-back {
+  background-image: url(../img/draw1d.jpg); }
   @media screen and (max-width: 39.9375rem) {
-    .packages {
-      padding: 1rem; } }
+    .top-left-back {
+      background-image: url(../img/draw1m.jpg); } }
 
-.package-item {
-  border: 0.2rem solid white;
-  background-color: #eeebeb;
-  padding: 0;
-  margin-bottom: 1rem; }
-  .package-item:hover {
-    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2); }
-  .package-item h3 {
-    text-align: center;
-    background-color: #9a7b22;
-    color: #eeebeb;
-    padding: 1.5rem; }
-  .package-item h2 {
-    text-align: center; }
-  .package-item ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    height: 30rem; }
-    .package-item ul li {
-      list-style: none;
-      padding: 0.2rem;
-      font-size: 1rem; }
-      .package-item ul li a:hover {
-        color: #444444; }
-    @media screen and (min-width: 40rem) and (max-width: 63.9375rem) {
-      .package-item ul {
-        height: 100%;
-        justify-content: flex-start; } }
-    @media screen and (max-width: 39.9375rem) {
-      .package-item ul {
-        height: 100%;
-        justify-content: flex-start; } }
+.top-right-back {
+  background-image: url(../img/modeld.jpg); }
+  @media screen and (max-width: 39.9375rem) {
+    .top-right-back {
+      background-image: url(../img/modelm.jpg); } }
+  .top-right-back h4 {
+    color: #ededed; }
+
+.panel:hover .front {
+  z-index: 1;
+  transform: rotateX(180deg); }
+
+.panel:hover .back {
+  z-index: 2;
+  transform: rotateX(0deg); }
+
+.slider-container {
+  padding: 0 2rem; }
+  @media screen and (max-width: 39.9375rem) {
+    .slider-container {
+      padding: 0 1rem; } }
+
+.slider-list {
+  padding: 0; }
+
+.slider-block {
+  flex-direction: column; }
+
+.slider-img {
+  max-width: 90%;
+  margin: auto; }
+
+.slider-article {
+  width: 80%;
+  margin: 1rem auto;
+  text-align: center; }
+
+.page-title h1 {
+  text-transform: uppercase; }
+
+.slider-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+
+#button-left, #button-right {
+  font-size: 3rem; }
+
+#button-left:hover, #button-right:hover, .mobile-menu a:hover, .btn:hover {
+  color: #2f3336; }
+
+.button-slide, #button-right, #button-left {
+  user-select: none; }
 
 /*# sourceMappingURL=main.css.map */

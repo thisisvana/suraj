@@ -1,3 +1,6 @@
+.works {
+  padding: 0 3rem;
+}
 .works-container {
   height: 50vh;
   background-color: transparent;
@@ -11,11 +14,17 @@
     font-size: 2rem;
     text-transform: uppercase;
   }
+  h4 {
+    padding: 1rem;
+
+  }
+
 }
 .top-left {
   // background-image: url("../img/banner.jpg");
   background-color: $lw;
 }
+
 .top-right {
   // background-image: url("../img/dj.jpg");
   background-color: $mid-grey;
@@ -25,4 +34,75 @@
 }
 .bottom-right {
   background-color: $bg-color;
+}
+
+.panel {
+
+    height: 50vh;
+    // margin: auto;
+    position: relative;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    // -o-transition: all .5s;
+    // -ms-transition: all .5s;
+    // -moz-transition: all .5s;
+    // -webkit-transition: all .5s;
+    transition: all .5s;
+    // -webkit-backface-visibility: hidden;
+    // -ms-backface-visibility: hidden;
+    // -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.front {
+    z-index: 2;
+    // background-image: url(http://img.afreecodec.com/images/v3/wp-content/uploads/2011/05/00_chrome_icon.jpg);
+}
+
+.back {
+    z-index: 1;
+    // -webkit-transform: rotateX(-180deg);
+    // -ms-transform: rotateX(-180deg);
+    // -moz-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+    // background-color: $bg-color;
+
+}
+.top-left-back {
+  background-image: url(../img/draw1d.jpg);
+  @media screen and (max-width: $mobile-max) {
+    background-image: url(../img/draw1m.jpg);
+
+  }
+}
+.top-right-back {
+  background-image: url(../img/modeld.jpg);
+  @media screen and (max-width: $mobile-max) {
+    background-image: url(../img/modelm.jpg);
+
+  }
+  h4 {
+    color: $light-grey;
+  }
+}
+.panel:hover .front {
+    z-index: 1;
+    // -webkit-transform: rotateX(180deg);
+    // -ms-transform: rotateX(180deg);
+    // -moz-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+
+.panel:hover .back {
+    z-index: 2;
+    // -webkit-transform: rotateX(0deg);
+    // -ms-transform: rotateX(0deg);
+    // -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
 }
