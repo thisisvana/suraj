@@ -75,7 +75,9 @@
 
 }
 .top-left-back {
-  background-image: url(../img/draw1d.jpg);
+  background-image: url(../img/draw1.jpg);
+  background-size: cover;
+
   @media screen and (max-width: $mobile-max) {
     background-image: url(../img/draw1m.jpg);
 
@@ -83,6 +85,7 @@
 }
 .top-right-back {
   background-image: url(../img/modeld.jpg);
+  background-size: cover;
   @media screen and (max-width: $mobile-max) {
     background-image: url(../img/modelm.jpg);
 
