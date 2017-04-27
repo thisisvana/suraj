@@ -20,7 +20,7 @@
                     </li>
                     <li class="slider-block">
                         <div class="slider-img">
-                            <img src="img/content/testimonials/testimonial2.jpg" alt="image"/></div>
+                            <img src="img/draw2.jpg" alt="image"/></div>
                         <article class="slider-article">
                             <p><i class="fa fa-quote-left" aria-hidden="true"></i> Lorem Ipsum dolor sit pais, tu es mi vida. Lorem Ipsum dolor sit pais, tu es mi vida. Lorem Ipsum dolor sit pais, tu es mi vida. Lorem Ipsum dolor sit pais, tu es mi vida.Lorem Ipsum dolor sit pais, tu es mi vida.Lorem Ipsum dolor sit pais, tu es mi vida. <i class="fa fa-quote-right" aria-hidden="true"></i></p>
                             <span class="slider-meta">Suraj Vadulas</span>
@@ -28,7 +28,15 @@
                     </li>
                     <li class="slider-block">
                         <div class="slider-img">
-                            <img src="img/content/testimonials/testimonial1.jpg" alt="image"/></div>
+                            <img src="img/draw3.jpg" alt="image"/></div>
+                        <article class="slider-article">
+                            <p><i class="fa fa-quote-left" aria-hidden="true"></i> Lorem Ipsum dolor sit pais, tu es mi vida. Lorem Ipsum dolor sit pais, tu es mi vida. Lorem Ipsum dolor sit pais, tu es mi vida. Lorem Ipsum dolor sit pais, tu es mi vida.Lorem Ipsum dolor sit pais, tu es mi vida.Lorem Ipsum dolor sit pais, tu es mi vida. <i class="fa fa-quote-right" aria-hidden="true"></i></p>
+                            <span class="slider-meta">Suraj Vadulas</span>
+                        </article>
+                    </li>
+                    <li class="slider-block">
+                        <div class="slider-img">
+                            <img src="img/draw4.jpg" alt="image"/></div>
                         <article class="slider-article">
                             <p><i class="fa fa-quote-left" aria-hidden="true"></i> Lorem Ipsum dolor sit pais, tu es mi vida. Lorem Ipsum dolor sit pais, tu es mi vida. Lorem Ipsum dolor sit pais, tu es mi vida. Lorem Ipsum dolor sit pais, tu es mi vida.Lorem Ipsum dolor sit pais, tu es mi vida.Lorem Ipsum dolor sit pais, tu es mi vida. <i class="fa fa-quote-right" aria-hidden="true"></i></p>
                             <span class="slider-meta">Suraj Vadulas</span>
