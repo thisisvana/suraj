@@ -8,8 +8,8 @@
         background-color: transparent;
         text-align: center;
         color: $lw;
-        border: 0.1rem solid $btn-banner;
-        background-color: $btn-banner;
+        border: 0.1rem solid $brand-color;
+        background-color: $brand-color;
         a{
           text-decoration: none;
           // &:hover {
@@ -17,7 +17,7 @@
           // }
         }
         &:hover {
-          border: 0.1rem solid $btn-banner;
+          border: 0.1rem solid $brand-color;
           background-color: transparent;
           color: $dark-grey;
           cursor: pointer;

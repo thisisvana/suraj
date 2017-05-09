@@ -2617,12 +2617,12 @@ body {
   background-color: transparent;
   text-align: center;
   color: #eeebeb;
-  border: 0.1rem solid #b328ad;
-  background-color: #b328ad; }
+  border: 0.1rem solid #9a7b22;
+  background-color: #9a7b22; }
   .btn a {
     text-decoration: none; }
   .btn:hover {
-    border: 0.1rem solid #b328ad;
+    border: 0.1rem solid #9a7b22;
     background-color: transparent;
     color: #444444;
     cursor: pointer; }
@@ -2690,7 +2690,6 @@ body {
   background-color: #2f3336; }
 
 .panel {
-  height: 50vh;
   position: relative; }
 
 .card {
@@ -2770,5 +2769,27 @@ body {
 
 .button-slide, #button-right, #button-left {
   user-select: none; }
+
+.about-container {
+  height: 80vh;
+  background-color: transparent;
+  display: flex; }
+
+.about-left-back {
+  background-image: url(../img/suraj.jpg);
+  background-size: cover; }
+  @media screen and (max-width: 39.9375rem) {
+    .about-left-back {
+      background-image: url(../img/suraj.jpg); } }
+
+.about-right-back {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+  background-size: cover; }
+  @media screen and (max-width: 39.9375rem) {
+    .about-right-back {
+      padding: 0;
+      font-size: 1rem; } }
 
 /*# sourceMappingURL=main.css.map */
