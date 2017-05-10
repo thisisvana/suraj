@@ -21,11 +21,10 @@
       <div class="back card box about-right-back">
         <p>A motivated and passionate FX Artist with versatility to develop high quality organic and
           inorganic models. Possessing the artistic expertise and technical ability required to work closely
-          with designers to create accurate models. Also having an ability to adapt to a project's mission,
-          vision and values. <br> I am a fast learner and can pick up new concepts and software rapidly.</p>
+          with designers to create accurate models. I am a fast learner and can pick up new concepts and software rapidly.</p>
         <p>I grew up in a small town, Shimoga in southern India. I have an engineering degree, but the fantastic
           world of film beckoned me so I left that world behind in pursuit of making effects in movies because
-          the FX spoke to the engineer in me. <br>I am a generalist
+          the FX spoke to the engineer in me.I am a generalist
           with understanding of production pipeline and skilled in Simulation Modeling,
           Texturing and Lighting. My simulation skill set includes rigid body and fluid dynamics.</p>
 

@@ -21,7 +21,7 @@
 			</div>
 		</footer> -->
 		<footer class="row expanded page-footer">
-			<a href="callto://12504623994"><p><i class="footer-icon fa fa-phone" aria-hidden="true">&nbsp;250-462-3994</i></p></a>
+			<a href="callto://12504623994"><p><i class="footer-icon fa fa-phone" aria-hidden="true">&nbsp;778-927-0545</i></p></a>
 			<a href="malito:surajvadulas@gmail.com"><p><i class="fa fa-envelope-o footer-icon" aria-hidden="true">&nbsp;surajvadulas@gmail.com</i></p></a>
 			<p class="rights">&copy;2016 Suraj Vadulas. All rights reserved. Developed by Silvana Agolli</p>
 		</footer>
