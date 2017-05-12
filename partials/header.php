@@ -14,6 +14,3 @@
     </head>
 
     <body>
-      <!-- <div id="wrap">
-        <p>move the cursor around the screen</p>
-      </div> -->

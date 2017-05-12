@@ -5,7 +5,7 @@
     <a href="drawings.php">
       <div class="panel works-container top-left small-12 medium-6 large-6 column">
         <div class="front card box">
-          <h1>Art</h1>
+          <h1>Drawings</h1>
         </div>
 
         <div class="back top-left-back card box">
