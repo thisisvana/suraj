@@ -1,34 +1,24 @@
+<?php include('../partials/blog_header.php'); ?>
+<?php include('../partials/blog_navbar.php'); ?>
 <?php
 include_once('resources/init.php');
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Category List</title>
-		 <style>
-            ul{list-style: none;}
-            li{display: inline; margin-right: 20px;}
-        </style>
-    </head>
-    <body>
-	<nav>
-        <ul>
-            <li><a href='index.php' >Index</a></li>
-            <li><a href='add_post.php' >Add a Post</a></li>
-            <li><a href='add_category.php' >Add Category</a></li>
-            <li><a href='category_list.php' >Category List</a></li>
-            <!--li><a href='' ></a></li-->
-        </ul>
-     </nav>
-     <h1>Yethroy's Simple Blog</h1>
+
+<div class="blog-container large-10 column">
+
+ <div class="blog-content">
+
 	 <h2>Categories</h2>
      <?php
      foreach(get_categories() as $category){
      ?>
-      <p><a href="category.php?id=<?php echo $category['id'];?>"><?php echo $category['name']; ?></a> -
-      <a href="delete_category.php?id=<?php echo $category['id'];?>">Delete</a></p> 
-     <?php  
+      <p><a class='blog-category' href="category.php?id=<?php echo $category['id'];?>"><?php echo $category['name']; ?></a> <br>
+      <a class="btn" href="delete_category.php?id=<?php echo $category['id'];?>">Delete</a></p>
+     <?php
      }
      ?>
-    </body>
+   </div>
+  </div>
+  </div>
+  </body>
 </html>

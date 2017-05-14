@@ -1,0 +1,55 @@
+
+.blog-container {
+  background-color: #f6f6f6;
+  padding: 4rem;
+  height: 100%;
+    a {
+      color: $brand-color;
+    }
+    p {
+      color: $mid-grey;
+    }
+
+}
+.blog-comment {
+  color: $dark-grey;
+}
+.blog-category {
+  color: $brand-color;
+}
+.post-ctrl {
+  display: flex;
+  padding: 0;
+  .btn a {
+    color: #fff;
+    &:hover {
+      color: $mid-grey;
+    }
+  }
+
+}
+.post-options {
+  padding:0;
+}
+.blog-content .btn {
+    color: #fff;
+}
+.text-input {
+  height: 4rem;
+  width: 20rem;
+
+}
+.cat-form {
+  display: flex;
+}
+.post-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  textarea, select {
+    width: 20rem;
+  }
+
+
+}

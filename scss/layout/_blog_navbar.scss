@@ -1,0 +1,40 @@
+// body {
+//   background-color: #fff;
+// }
+
+#blog-nav {
+  height: 100vh;
+  position: fixed;
+  background-color: #222;
+  padding: 3rem;
+  .blog-menu {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      padding: 0;
+      li {
+        text-align: left;
+        a {
+          &:hover {
+            color: $brand-color;
+          }
+        }
+      }
+      @media screen and (max-width: $mobile-max) {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 1rem;
+
+
+      }
+
+  }
+  @media screen and (max-width: $mobile-max) {
+    padding: 1rem;
+    position: sticky;
+    height: 22%;
+    width: 100%;
+
+  }
+}

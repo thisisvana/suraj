@@ -13,7 +13,7 @@
         <ul class="main-menu">
           <li><a href="index.php">Works</a></li>
           <li><a href="about.php">About</a></li>
-          <li><a href="blog.php">Blog</a></li>
+          <li><a href="blog-page.php">Blog</a></li>
           <li><a href="contact.php">Contact</a></li>
         </ul>
       </nav>

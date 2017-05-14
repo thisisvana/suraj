@@ -1,12 +1,14 @@
+<?php include('../partials/blog_header.php'); ?>
+<?php include('../partials/blog_navbar.php'); ?>
 <?php
 include_once('resources/init.php');
 if(isset($_POST['name'])){
     $name = trim($_POST['name']);
-    
+
     if(empty($name)){
         $error = 'You must submit the category name';
     }
-    else if(category_exists('name',$name)){ 
+    else if(category_exists('name',$name)){
         $error = 'That category already exists';
     } else if(strlen($name)> 24){
         $error = 'The category name only be up to 24 characters only';
@@ -21,7 +23,7 @@ if(isset($_POST['name'])){
 
 ?>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
     <head>
         <title>Add a Category</title>
@@ -30,17 +32,21 @@ if(isset($_POST['name'])){
             li{display: inline; margin-right: 20px;}
         </style>
     </head>
-    <body>
-	<nav>
+    <body> -->
+<div class="blog-container large-10 column">
+
+  <div class="blog-content">
+
+	<!-- <nav>
         <ul>
-            <li><a href='index.php' >Index</a></li>
+            <li><a href='blog_admin.php' >Home</a></li>
             <li><a href='add_post.php' >Add a Post</a></li>
             <li><a href='add_category.php' >Add Category</a></li>
             <li><a href='category_list.php' >Category List</a></li>
-            <!--li><a href='' ></a></li-->
+
         </ul>
      </nav>
-     <h1>Yethroy's Simple Blog</h1>
+     <h1>Suraj's Blog</h1> -->
      <h2>Add Category</h2>
      <p>
         <?php if(isset($error)){
@@ -48,11 +54,14 @@ if(isset($_POST['name'])){
             } ?>
      </p>
      <div>
-      <form action='' method='post'>
+      <form class='cat-form' action='' method='post'>
         <label for='name'>Name </label>
-        <input type='text' name='name' />
-        <input type='submit' value='Add Category' />
+        <input class='text-input' type='text' name='name' /><br>
+        <input type='submit' class='btn' value='Add Category' />
       </form>
       </div>
-    </body>
+     </div>
+    </div>
+   </div>
+  </body>
 </html>

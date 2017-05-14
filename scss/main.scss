@@ -21,6 +21,8 @@
 // 4. Layout-related sections
 @import
   'layout/header',
+  'layout/blog_navbar',
+  'layout/blog_header',
   'layout/navbar',
   'layout/footer';
 
@@ -34,6 +36,8 @@
   'pages/drawings',
   'pages/simulations',
   'pages/compositions',
+  'pages/blog-page',
+  'pages/blog_admin',
   'pages/models',
   'pages/about',
   'pages/contact';
