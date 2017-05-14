@@ -5,7 +5,7 @@
     <a href="drawings.php">
       <div class="panel works-container top-left small-12 medium-6 large-6 column">
         <div class="front card box">
-          <h1>Drawings</h1>
+          <h1>Art</h1>
         </div>
 
         <div class="back top-left-back card box">
@@ -25,7 +25,7 @@
   </a>
   </div>
   <div class="works row expanded">
-    <a href="works.php">
+    <a href="simulations.php">
       <div class="panel works-container bottom-left small-12 medium-6 large-6 column">
         <div class="front card box">
           <h1>Simulations</h1>
@@ -36,7 +36,7 @@
 
       </div>
     </a>
-    <a href="works.php">
+    <a href="compositions.php">
       <div class="panel works-container bottom-right small-12 medium-6 large-6 column">
         <div class="front card box">
           <h1>Compositions</h1>

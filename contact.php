@@ -1,4 +1,4 @@
-
+<!--
 <?php include('partials/header.php'); ?>
 <?php include('partials/navbar.php'); ?>
 
@@ -231,4 +231,4 @@
 <!-- <div class='options'>
   <button class='dark'></button>
   <button class='light'></button>
-</div> -->
+</div> --> -->
