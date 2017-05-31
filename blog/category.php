@@ -5,7 +5,7 @@ include_once('resources/init.php');
 $posts = get_posts(null,$_GET['id']);
 ?>
 
-<div class="blog-container large-10 column">
+<div class="blog-container large-8 column">
 
   <div class="blog-content">
 
@@ -18,11 +18,11 @@ $posts = get_posts(null,$_GET['id']);
         Posted on <?php echo date('d-m-y h:i:s',strtotime($post['date_posted'])); ?><br>
         Category: <a class='blog-category' href='category.php?id=<?php echo $post['category_id']; ?>' ><?php echo $post['name']; ?></a>
      </p>
-     <div><?php echo nl2br($post['contents']); ?></div>
+     <div><p><?php echo nl2br($post['contents']); ?></p></div>
      <menu class="post-options">
         <ul class="post-ctrl">
-            <li><a class='btn' href='delete_post.php?id=<?php echo $post['post_id']; ?>' >Delete This Post</a></li>
-            <li><a class='btn' href='edit_post.php?id=<?php echo $post['post_id']; ?>' >Edit This Post</a></li>
+            <li><a class='btn' href='delete_post.php?id=<?php echo $post['post_id']; ?>' >Delete</a></li>
+            <li><a class='btn' href='edit_post.php?id=<?php echo $post['post_id']; ?>' >Edit</a></li>
         </ul>
      </menu>
      <?php

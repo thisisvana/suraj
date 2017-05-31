@@ -1,31 +1,50 @@
 .about-container {
-  height: 80vh;
+  padding: 0;
   background-color: transparent;
   display: flex;
 
-}
 
+}
+.about-desc {
+  font-family: $arya;
+  font-size: 1.1rem;
+
+
+}
+.front-left {
+  height: 120vh;
+}
 .about-left-back {
+
   background-image: url(../img/suraj.jpg);
   background-size: cover;
 
+
   @media screen and (max-width: $mobile-max) {
-    background-image: url(../img/suraj.jpg);
+    // background-image: url(../img/suraj.jpg;
+
 
   }
 }
 .about-right-back {
+
   display: flex;
   flex-direction: column;
-  padding: 4rem;
-  // background-image: url(../img/modeld.jpg);
-  background-size: cover;
+  padding: 1rem 2rem;
+
   @media screen and (max-width: $mobile-max) {
-    // background-image: url(../img/modelm.jpg);
+
     padding: 0;
     font-size: 1rem;
 
   }
-
-
+}
+.pre-footer {
+  height: 3rem;
+}
+.resume {
+  h5 {
+    color: $brand-color;
+    padding-left: 2rem;
+  }
 }

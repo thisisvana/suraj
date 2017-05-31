@@ -1,22 +1,28 @@
 <?php
 
-function add_post($title,$contents,$category){
-    $title      = mysql_real_escape_string($title);
-    $contents   = mysql_real_escape_string($contents);
-    $category   = (int)$category;
-    
 
-    mysql_query("INSERT INTO `posts` SET
+function add_post($title,$contents,$category){
+
+    $title      = mysqli_real_escape_string($title);
+    $contents   = mysqli_real_escape_string($contents);
+    $category   = (int)$category;
+    // $image      = mysqli_real_escape_string($targetFile);
+
+    mysqli_query("INSERT INTO `posts` SET
                 `cat_id`     = {$category},
                 `title`      = '{$title}',
                 `contents`   = '{$contents}',
+                -- `image`      = `{$image}`,
                 `date_posted`= NOW()");
+
+
 }
 
-function edit_post($id,$title,$contents,$category){
+function edit_post($id,$title,$contents,$category,$image){
     $id         = (int)$id;
     $title      = mysql_real_escape_string($title);
     $contents   = mysql_real_escape_string($contents);
+    // $image      = mysqli_real_escape_string($targetFile);
     $category   = (int)$category;
 
     mysql_query("UPDATE `posts` SET
@@ -79,6 +85,8 @@ function get_categories($id = null){
 
    return $categories;
 }
+
+
 
 function category_exists($field,$name){
     $name = mysql_real_escape_string($name);

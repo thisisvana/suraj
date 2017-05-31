@@ -9,9 +9,12 @@
 }
 .vid-info {
   background-color: $light-grey;
-  padding: 4.5rem 2rem;
-
-
+  padding: 2rem 2rem;
+  height: 350px;
+  h1 {
+    color: $brand-color;
+    font-family: $arya;
+  }
   p {
 
     color: $mid-grey;

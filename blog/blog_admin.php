@@ -6,7 +6,7 @@ include_once('resources/init.php');
 $posts = get_posts((isset($_GET['id']))? $_GET['id'] : null);
 ?>
 
- <div class="blog-container large-10 column">
+ <div class="blog-container large-8 column">
 
    <div class="blog-content">
 
@@ -14,12 +14,13 @@ $posts = get_posts((isset($_GET['id']))? $_GET['id'] : null);
      <?php
      foreach($posts as $post){
       ?>
+     <img src="img/<?php echo $photo['id']; ?>" alt="image">
      <h2><a href='blog_admin.php?id=<?php echo $post['post_id']; ?>' ><?php echo $post['title']; ?></a></h2>
      <p>
         Posted on <?php echo date('d-m-y h:i:s',strtotime($post['date_posted'])); ?><br>
         Category: <a class='blog-category' href='category.php?id=<?php echo $post['category_id']; ?>' ><?php echo $post['name']; ?></a>
      </p>
-     <div class="blog-comment"><?php echo nl2br($post['contents']); ?></div>
+     <div class="blog-comment"><p><?php echo nl2br($post['contents']); ?></p></div>
      <menu class="post-options">
         <ul class="post-ctrl">
             <li class='btn'><a href='delete_post.php?id=<?php echo $post['post_id']; ?>' >Delete</a></li>

@@ -10,12 +10,12 @@
   @media screen and (min-width: $tablet-min) and (max-width: $tablet-max){
     flex-direction: column;
     padding: 1rem 4rem;
-    background-color: $lw;
+    // background-color: $lw;
   }
   @media screen and (max-width: $mobile-max){
     flex-direction: column;
     padding: 1rem 4rem;
-    background-color: $lw;
+    // background-color: $lw;
 
   }
   .rights {

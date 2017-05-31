@@ -16,8 +16,10 @@
 .slider-img {
     // -webkit-clip-path: circle(50% at 50% 50%);
     // clip-path: circle(50% at 50% 50%);
-    max-width: 90%;
+    max-width: 100%;
     margin: auto;
+    object-fit: cover;
+
 }
 .slider-article {
     width: 80%;

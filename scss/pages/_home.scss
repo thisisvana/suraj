@@ -1,5 +1,8 @@
 .works {
   padding: 0 3rem;
+  @media screen and (max-width: $mobile-max){
+    padding: 0 2rem;
+  }
 }
 .works-container {
   height: 50vh;
@@ -10,9 +13,14 @@
   display: flex;
   margin: auto;
   h1 {
+    font-family: $philo;
+    letter-spacing: 0.2rem;
     color: $brand-color;
     font-size: 2rem;
     text-transform: uppercase;
+    @media screen and (max-width: $mobile-max){
+      font-size: 1.3rem;
+    }
   }
   h4 {
     padding: 1rem;
@@ -38,8 +46,7 @@
 }
 
 .panel {
-
-
+  padding: 0;
     // margin: auto;
     position: relative;
 }
@@ -47,18 +54,18 @@
 .card {
     width: 100%;
     height: 100%;
-    // -o-transition: all .5s;
-    // -ms-transition: all .5s;
-    // -moz-transition: all .5s;
-    // -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    -ms-transition: all .5s;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
     transition: all .5s;
-    // -webkit-backface-visibility: hidden;
-    // -ms-backface-visibility: hidden;
-    // -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
     backface-visibility: hidden;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
 }
 
 .front {
@@ -68,10 +75,10 @@
 
 .back {
     z-index: 1;
-    // -webkit-transform: rotateX(-180deg);
-    // -ms-transform: rotateX(-180deg);
-    // -moz-transform: rotateX(-180deg);
-    transform: rotateX(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
     // background-color: $bg-color;
 
 }
@@ -80,33 +87,86 @@
   background-size: cover;
 
   @media screen and (max-width: $mobile-max) {
-    background-image: url(../img/draw1m.jpg);
+    // background-image: url(../img/draw1m.jpg);
 
   }
 }
 .top-right-back {
-  background-image: url(../img/modeld.jpg);
+  background-image: url(../img/typer.jpg);
   background-size: cover;
   @media screen and (max-width: $mobile-max) {
-    background-image: url(../img/modelm.jpg);
+    // background-image: url(../img/modelm.jpg);
 
   }
   h4 {
     color: $light-grey;
   }
 }
+.bottom-right-back {
+  background-image: url(../img/room.jpg);
+  background-size: cover;
+
+  @media screen and (max-width: $mobile-max) {
+    // background-image: url(../img/draw1m.jpg);
+
+  }
+}
+.bottom-left-back {
+  background-image: url(../img/fire.jpg);
+  background-size: cover;
+
+
+}
 .panel:hover .front {
     z-index: 1;
-    // -webkit-transform: rotateX(180deg);
-    // -ms-transform: rotateX(180deg);
-    // -moz-transform: rotateX(180deg);
-    transform: rotateX(180deg);
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 .panel:hover .back {
     z-index: 2;
-    // -webkit-transform: rotateX(0deg);
-    // -ms-transform: rotateX(0deg);
-    // -moz-transform: rotateX(0deg);
-    transform: rotateX(0deg);
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.overlayDiv {
+  position:fixed;
+  top:0;
+  left:0;
+  background-color:rgba(0,0,0,0.8);
+  width:100%;
+  height:100%;
+  z-index:101;
+  display:none;
+}
+
+.modalDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: 2rem;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: $lw;
+  z-index:1111;
+}
+
+.modalDiv {
+  h1{
+    display: flex;
+    margin: auto;
+    font-size: 1.5rem;
+    @media screen and (max-width: $mobile-max) {
+      font-size: 1.2rem;
+    }
+  }
+
 }

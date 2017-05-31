@@ -1,7 +1,10 @@
 <?php include('../partials/blog_header.php'); ?>
 <?php include('../partials/blog_navbar.php'); ?>
 <?php
-include_once('resources/init.php');
+include_once('resources/init.php'); ?>
+
+
+<?php
 
 if(isset($_POST['title'],$_POST['contents'],$_POST['category'])){
 
@@ -39,7 +42,16 @@ if(isset($_POST['title'],$_POST['contents'],$_POST['category'])){
 
   <div class="blog-content">
 
+
+
         <h2>Add a Post</h2>
+        <form action="" method="post" enctype="multipart/form-data">
+
+            <ul>
+                <li><p>Pick new photo:<input type="file" name="photo"></p></li>
+                <br/>
+            </ul>
+        </form>
         <?php
         if(isset($errors) && !empty($errors)){
             echo"<ul><li>",implode("</li><li>",$errors),"</li></ul>";
@@ -52,7 +64,7 @@ if(isset($_POST['title'],$_POST['contents'],$_POST['category'])){
 
 
          <label for='contents'><p>Content</p></label>
-         <textarea name='contents' cols=20 rows=10><?php if(isset($_POST['contents'])) echo $_POST['contents']; ?></textarea>
+         <textarea name='contents' cols="50" rows="5"><?php if(isset($_POST['contents'])) echo $_POST['contents']; ?></textarea>
 
 
        <label for='category'><p>Category</p></label>
@@ -71,5 +83,14 @@ if(isset($_POST['title'],$_POST['contents'],$_POST['category'])){
    </div>
   </div>
   </div>
+  <script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script>
+  <script type="text/javascript">
+//<![CDATA[
+  bkLib.onDomLoaded(function() {
+        new nicEditor().panelInstance('area1');
+
+  });
+  //]]>
+  </script>
   </body>
 </html>

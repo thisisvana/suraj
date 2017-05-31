@@ -5,6 +5,7 @@
 .btn {
         width: 10rem;
         padding: 1rem;
+        
         background-color: transparent;
         text-align: center;
         color: $lw;
@@ -22,6 +23,9 @@
           background-color: transparent;
           color: $dark-grey;
           cursor: pointer;
+        }
+        h4 {
+          margin: 0;
         }
 }
 

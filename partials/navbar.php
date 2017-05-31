@@ -1,3 +1,8 @@
+<?php require_once("includes/session.php"); ?>
+<?php require_once("includes/db_connection.php"); ?>
+<?php require_once("includes/functions.php"); ?>
+
+
 <header>
 
   <div class="nav-bar row expanded">
@@ -9,6 +14,8 @@
     </div>
     <div class="mobile-menu hide-for-large"><i class="fa fa-bars" aria-hidden="true"></i></div>
     <div class="large-6 column">
+
+
       <nav class="main-nav">
         <ul class="main-menu">
           <li><a href="index.php">Works</a></li>

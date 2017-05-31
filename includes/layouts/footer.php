@@ -1,21 +1,23 @@
-<footer class="page-footer">
-
-
-    <div class="row">
-      <div class="footer-box small-12 medium-12 large-12 columns">
-        <div class="footer-text">
-             <i class="footer-icon fa fa-copyright" aria-hidden="true"></i>
-             <p>Silvana Agolli<br>
-             VanArts - 2017</p>
-        </div>
-      </div>
-    </div>
-
-</footer>
-<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <!-- <div id="footer">Copyright <?php echo date("Y"); ?>, Suraj Vadulas</div> -->
+    <script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script>
+    <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+    <script type="text/javascript">
+  // <![CDATA[
+    bkLib.onDomLoaded(function() {
+          // new nicEditor().panelInstance('post');
+          // new nicEditor({fullPanel : true}).panelInstance('post');
+  //         new nicEditor({iconsPath : '../nicEditorIcons.gif'}).panelInstance('area3');
+  //         new nicEditor({buttonList : ['fontSize','bold','italic','underline','strikeThrough','subscript','superscript','html','image']}).panelInstance('area4');
+          // new nicEditor({maxHeight : 100}).panelInstance('post');
+    });
+  //   ]]>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.js"></script>
+	</body>
+</html>
 <?php
-// Close database connection
-if (isset($connection)) {
-mysqli_close($connection);
-}
+  // Close database connection
+	if (isset($connection)) {
+	  mysqli_close($connection);
+	}
 ?>

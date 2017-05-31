@@ -1,5 +1,7 @@
+
 <?php include('partials/header.php'); ?>
 <?php include('partials/navbar.php'); ?>
+
 
   <div class="works row expanded">
     <a href="drawings.php">
@@ -47,5 +49,22 @@
       </div>
     </a>
   </div>
+  <div class="overlayDiv" >
+      <div class="modalDiv">
+        <h1>Did you have a chance to check out my latest works? </h1>
+        <a href="simulations.php"><h3 class="btn">Click to see</h3>
+          <!-- <h1><i class="fa fa-frown-o" aria-hidden="true"></i></h1> -->
+      </div>
+  </div>
+
+  <script>
+    $('body').one("mouseleave", function(e){
+        $(".overlayDiv").fadeIn(500);
+    });
+
+    $(".overlayDiv").click(function() {
+        $(this).fadeOut(500);
+    });
+  </script>
 
 <?php include('partials/footer.php'); ?>

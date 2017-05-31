@@ -136,4 +136,15 @@ $(document).ready(function(){
   //     $("<div class='ball' style='" + style + "'></div>").appendTo('#wrap').one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function(){$(this).remove();});
   //   }
   // }, 1);
+
+
+});
+$(document).ready(function() {
+
+    $('article').readmore({
+		speed: 1000,
+		collapsedHeight: 100,
+		moreLink: '<a class="readMore">Read More</a>',
+		lessLink: '<a class="readMore">Close</a>'
+	});
 });

@@ -26,7 +26,7 @@ div {
 }
 
 .main-menu {
-
+  position: relative;
   float: right;
   display: flex;
   justify-content: center;
@@ -47,6 +47,7 @@ div {
       color: $mid-grey;
       &:hover {
         color: $brand-color;
+
       }
     }
 
@@ -87,4 +88,8 @@ div {
     }
   }
 
+}
+.pages {
+
+  // display: none;
 }
