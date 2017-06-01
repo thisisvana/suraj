@@ -33,31 +33,31 @@ if (isset($_POST['submit'])) {
     }
   }
 } else {
-  // This is probably a GET request
 
-} // end: if (isset($_POST['submit']))
+
+}
 
 ?>
 
 <?php $layout_context = "admin"; ?>
 <?php include("includes/layouts/header.php"); ?>
-<div id="main">
+<div id="main" class='page'>
   <div id="navigation">
     &nbsp;
   </div>
-  <div id="page">
+  <div id="page" class="add-post row">
     <?php echo message(); ?>
     <?php echo form_errors($errors); ?>
 
     <h2>Login</h2>
     <form action="login.php" method="post">
-      <p>Username:
+      <p>Username:<br>
         <input type="text" name="username" value="<?php echo htmlentities($username); ?>" />
       </p>
-      <p>Password:
+      <p>Password:<br>
         <input type="password" name="password" value="" />
       </p>
-      <input type="submit" name="submit" value="Submit" />
+      <input type="submit" class="btn-admin" name="submit" value="Submit" />
     </form>
   </div>
 </div>

@@ -5,15 +5,17 @@
 
 <?php $layout_context = "admin"; ?>
 <?php include("includes/layouts/header.php"); ?>
-
+<?php include("includes/layouts/navbar.php"); ?>
 
 
     <div class="add-post row">
-      <a href='manage_content.php'>Back</a>
+      <div class="add-post">
+
+      <!-- <a href='manage_content.php'>Back</a> -->
         <h2>add file</h2>
         <form class="admin-form" enctype="multipart/form-data" method="POST" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>">
-          <label>Choose Image
-          <input type="file" name="imageUploaded"></label><br>
+
+          <input type="file" name="imageUploaded"><br>
           <!-- <label>Choose thumbnail
           <input type="file" name="imageUploaded2"></label><br> -->
           <!-- <input class="inp" type="text" name="name" id="title" placeholder="Name"><br> -->
@@ -24,7 +26,7 @@
         <?php
 
           if(isset($_POST['submit'])) {
-            $targetDirectory = "img/";
+            $targetDirectory = "img/uploads/";
             $targetFile = $targetDirectory . basename($_FILES['imageUploaded']['name']);
             // $targetFile2 = $targetDirectory . basename($_FILES['imageUploaded2']['name']);
             $uploadOk = true;
@@ -86,11 +88,9 @@
           ?>
         </select>
 
-      </div>
-
     </form>
-
-    </div>
+  </div>
+</div>
 
 
 <?php include("includes/layouts/footer.php"); ?>

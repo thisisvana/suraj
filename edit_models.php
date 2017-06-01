@@ -5,41 +5,40 @@
 
 <?php $layout_context = "admin"; ?>
 <?php include("includes/layouts/header.php"); ?>
+<?php include("includes/layouts/navbar.php"); ?>
 
+<div class="add-post page row">
+  <!-- <a href='manage_content.php'>Back</a> -->
 
-        <div class="add-post row">
-          <a href='manage_content.php'>Back</a>
+  <h2>edit models</h2>
+  <table class="large-12 columns">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Image</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+      <?php
+            $sql = "SELECT * FROM models ORDER BY id DESC";
+            $result = mysqli_query($connection, $sql);
 
-            <h2>edit models</h2>
-            <table class="large-12 columns">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Title</th>
-                        <th>Image</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                    <?php
-                          $sql = "SELECT * FROM models ORDER BY id DESC";
-                          $result = mysqli_query($connection, $sql);
+            if (mysqli_num_rows($result) > 0) {
+                // output data of each row
+                while($row = mysqli_fetch_assoc($result)) {
+                    echo "<tr>";
+                      echo "<td>" . $row['id'] . "</td>";
 
-                          if (mysqli_num_rows($result) > 0) {
-                              // output data of each row
-                              while($row = mysqli_fetch_assoc($result)) {
-                                  echo "<tr>";
-                                    echo "<td>" . $row['id'] . "</td>";
+                        echo "<td><a href='http://localhost/suraj/edit_single_model.php?id=" . $row['id'] . "'>" . $row['name'] . "<a/></td>";
+                        echo "<td><img style='width:50%' src='".$row['image']."'/></td>";
+                      echo "<td>" . $row['description'] . "</td>";
+                    echo "</tr>";
+                }
+            }
 
-                                      echo "<td><a href='http://localhost/suraj/edit_single_model.php?id=" . $row['id'] . "'>" . $row['name'] . "<a/></td>";
-                                      echo "<td><img style='width:50%' src='".$row['image']."'/></td>";
-                                    echo "<td>" . $row['description'] . "</td>";
-                                  echo "</tr>";
-                              }
-                          }
+      ?>
+  </table>
+</div>
 
-                    ?>
-                </table>
-        </div>
-
-
-    <?php include("includes/layouts/footer.php"); ?>
+<?php include("includes/layouts/footer.php"); ?>

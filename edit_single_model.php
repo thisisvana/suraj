@@ -42,36 +42,38 @@
  ?>
 
 
-        <div class="add-post row">
-          <a href="edit_models.php">Back</a>
-            <h2>edit model</h2>
-            <form class="form-admin" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
-                  <?php
+  <div class="add-post row">
+    <a href="edit_models.php">Back</a>
+      <h2>edit model</h2>
+      <form class="form-admin" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
+            <?php
 
-                      $id = $_GET['id'];
-                      $sql = "SELECT * FROM models WHERE id = $id";
-                      $result = mysqli_query($connection, $sql);
+                $id = $_GET['id'];
+                $sql = "SELECT * FROM models WHERE id = $id";
+                $result = mysqli_query($connection, $sql);
 
-                      if(mysqli_num_rows($result) > 0) {
-                          // output data of each row
-                          while($row = mysqli_fetch_assoc($result)) {
-                              echo "<label><span>ID:</span></label>";
-                              echo "<input type='number' name='id' value='" . $row['id'] . "' readonly/><br><br>";
-                              echo "<label><span>Title:</span></label>";
-                              echo "<input type='text' name='title' value='" . $row['name'] . "' required /><br><br>";
-                              echo "<label><span>Image:</span></label>";
-                              echo "<input type='text' name='image' value='" . $row['image'] . "' required /><br><br>";
+                if(mysqli_num_rows($result) > 0) {
+                    // output data of each row
+                    while($row = mysqli_fetch_assoc($result)) {
+                        echo "<label><span>ID:</span></label>";
+                        echo "<input type='number' name='id' value='" . $row['id'] . "' readonly/><br><br>";
+                        echo "<label><span>Title:</span></label>";
+                        echo "<input type='text' name='title' value='" . $row['name'] . "' required /><br><br>";
+                        echo "<label><span>Image:</span></label>";
+                        echo "<input type='text' name='image' value='" . $row['image'] . "' required /><br><br>";
 
-                              echo "<label><span>Content:</span></label>";
-                              echo "<textarea style='width:100%' name='content' id='area1'>" . $row['description'] . "</textarea>";
-                          }
-                      }
+                        echo "<label><span>Content:</span></label>";
+                        echo "<textarea style='width:100%' name='content' id='area1'>" . $row['description'] . "</textarea>";
+                    }
+                }
 
-                ?>
+          ?>
+          <div class="action-btn">
             <input type="submit" name="submit" value="Update" class="btn-admin edit-blog-submit" />
-            <input type="submit" name="delete" value="Delete" class="btn-admin" />
+            <input type="submit" name="delete" value="Delete" class="btn-admin" id="del-btn" onclick="return confirm('Are you sure?');"/>
 
-        </form>
+          </div>
+  </form>
 
-      </div>
-      <?php include("includes/layouts/footer.php"); ?>
+</div>
+<?php include("includes/layouts/footer.php"); ?>

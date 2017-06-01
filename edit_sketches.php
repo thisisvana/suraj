@@ -5,10 +5,10 @@
 
 <?php $layout_context = "admin"; ?>
 <?php include("includes/layouts/header.php"); ?>
+<?php include("includes/layouts/navbar.php"); ?>
 
-
-        <div class="add-post row">
-          <a href='manage_content.php'>Back</a>
+        <div class="add-post page row">
+          <!-- <a href='manage_content.php'>Back</a> -->
 
             <h2>edit sketches</h2>
             <table class="large-12 columns">

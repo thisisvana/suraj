@@ -55,9 +55,10 @@
                           // output data of each row
                           while($row = mysqli_fetch_assoc($result)) {
                               echo "<label><span>ID:</span></label>";
-                              echo "<input type='number' name='id' value='" . $row['id'] . "' readonly/>";
+                              echo "<input type='number' name='id' value='" . $row['id'] . "' readonly/><br></br>";
                               echo "<label><span>Title:</span></label>";
                               echo "<input type='text' name='title' value='" . $row['name'] . "' required /><br><br>";
+                              echo "<label><span>Url link:</span></label>";
                               echo "<input type='text' name='video' value='" . $row['video'] . "' required /><br><br>";
 
                               echo "<label><span>Content:</span></label>";
@@ -66,8 +67,11 @@
                       }
 
                 ?>
-            <input type="submit" name="submit" value="Update" class="btn-admin edit-blog-submit" />
-            <input type="submit" name="delete" value="Delete" class="btn-admin" />
+                <div class="action-btn">
+                  <input type="submit" name="submit" value="Update" class="btn-admin edit-blog-submit" />
+                  <input type="submit" name="delete" value="Delete" class="btn-admin" id="del-btn" onclick="return confirm('Are you sure?');"/>
+
+                </div>
 
         </form>
 

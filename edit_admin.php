@@ -51,32 +51,31 @@ if (isset($_POST['submit'])) {
 
   }
 } else {
-  // This is probably a GET request
 
-} // end: if (isset($_POST['submit']))
+}
 
 ?>
 
 <?php $layout_context = "admin"; ?>
 <?php include("includes/layouts/header.php"); ?>
 
-<div id="main">
+<div id="main" class="add-post row">
   <div id="navigation">
     &nbsp;
   </div>
-  <div id="page">
+  <div id="page" class="add-post">
     <?php echo message(); ?>
     <?php echo form_errors($errors); ?>
 
     <h2>Edit Admin: <?php echo htmlentities($admin["username"]); ?></h2>
     <form action="edit_admin.php?id=<?php echo urlencode($admin["id"]); ?>" method="post">
-      <p>Username:
+      <p>Username:<br>
         <input type="text" name="username" value="<?php echo htmlentities($admin["username"]); ?>" />
       </p>
-      <p>Password:
+      <p>Password:<br>
         <input type="password" name="password" value="" />
       </p>
-      <input type="submit" name="submit" value="Edit Admin" />
+      <input type="submit" class="btn-admin" name="submit" value="Edit Admin" />
     </form>
     <br />
     <a href="manage_admins.php">Cancel</a>

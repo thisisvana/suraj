@@ -5,10 +5,10 @@
 
 <?php $layout_context = "admin"; ?>
 <?php include("includes/layouts/header.php"); ?>
-
+<?php include("includes/layouts/navbar.php"); ?>
 
     <div class="add-post row">
-      <a href='manage_content.php'>Back</a>
+      <!-- <a href='manage_content.php'>Back</a> -->
 
         <h2>edit blog</h2>
         <table class="blog-table large-12 columns">

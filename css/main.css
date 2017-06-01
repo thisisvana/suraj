@@ -2963,6 +2963,9 @@ image {
   -webkit-transform: scale(1);
   transform: scale(1); }
 
+.big-art {
+  display: none; }
+
 .light {
   background-color: #f9f9f9;
   color: #1a1a1a; }

@@ -2,7 +2,7 @@
 <?php require_once("includes/db_connection.php"); ?>
 <?php require_once("includes/functions.php"); ?>
 <?php confirm_logged_in(); ?>
-<div class="row">
+<div class="page row">
 
 <?php
 	// require_once 'connection.php';

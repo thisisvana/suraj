@@ -26,18 +26,7 @@
             $backimg = $row["image"];
             // $img = $row["thumbnail"];
 
-            // echo "<div class='item'><img src='img/".$img."' alt='drawings'>";
-            // echo "<svg preserveAspectRatio='xMidYMid slice' viewBox='0 0 300 200'>";
-            // echo "<defs>";
-            // echo "<clipPath id='clip-0'><circle cx='0' cy='0' fill='#000' r='150px'></circle></clipPath>";
-            // echo "</defs>";
-            // echo "<text class='svg-text' dy='.3em' x='50%' y='50%'>".$name."</text>";
-            // echo "<g clip-path='url(#clip-0)'>";
-            // echo "<image height='100%' preserveAspectRatio='xMinYMin slice' width='100%' href='img/".$backimg."' data-fancybox='group'></image>";
-            // echo "<text class='svg-masked-text' dy='.3em' x='50%' y='50%'>".$name."</text>";
-            // echo "</g>";
-            // echo "</svg>";
-            // echo "</div>";
+
 
 
       ?>
@@ -55,7 +44,10 @@
             Beauty
           </text>
           <g clip-path='url(#clip-0)'> -->
-            <image height='100%'  src='<?php echo $row['image'];?>'></image>
+
+              <image height="100" alt="artistic drawings" src='<?php echo $row['image'];?>'/><span><img class="big-art" alt="artistic sketches" src='<?php echo $row['image'];?>'/></span>
+
+
             <!-- <text class='svg-masked-text' dy='.3em' x='50%' y='50%'>
               Beauty
             </text>
@@ -70,8 +62,6 @@
     </div>
   </main>
 </div>
-<!-- <div class='options'>
-  <button class='dark'></button>
-  <button class='light'></button>
-</div> -->
+
+
 <?php include('partials/footer.php'); ?>

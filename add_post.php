@@ -5,17 +5,17 @@
 
 <?php $layout_context = "admin"; ?>
 <?php include("includes/layouts/header.php"); ?>
+<?php include("includes/layouts/navbar.php"); ?>
 
-
-    <div class = "add-post row">
-      <a href='manage_content.php'>Back</a>
+    <div class = "add-post page row">
+      <!-- <a href='manage_content.php'>Back</a> -->
       <h2>add blog post</h2>
 
       <div class = "col-md-3"></div>
       <div class = "col-md-6 well">
         <hr style = "border-top:1px dotted #000;"/>
-        <button class = "btn  btn-primary" id = "btn_post"><span class = "glyphicon glyphicon-plus"></span> Add Post</button>
-        <button style = "display:none;" class = "btn  btn-danger" id = "btn_close"><span class = "glyphicon glyphicon-remove"></span> Close</button>
+        <button class = "btn  btn-primary" id = "btn_post"><span><i class="fa fa-caret-down" aria-hidden="true"></i></span>&nbsp; Add Post</button>
+        <button style = "display:none;" class = "btn  btn-danger" id = "btn_close"><span><i class="fa fa-caret-up" aria-hidden="true"></i></span>&nbsp; Close</button>
         <br /><br />
         <div  style = "display:none;" id = "post_form" class = "col-md-12">
           <form action="add_post_process.php" method="post" enctype="multipart/form-data">
@@ -61,7 +61,7 @@
             <input type = "text" class = "form-control" placeholder = "Author" id = "author"/><br><br>
 
             <label>Blog Content</label><br>
-            <textarea name = "content" style = "height: 15rem; width:50rem;" id = "post"  class = "editor1" placeholder = "Enter your post here..."></textarea>
+            <textarea name = "content" id = "post"  class = "editor1" placeholder = "Enter your post here..."></textarea>
 
             <br>
             <!-- <p>Visible:<br>
@@ -71,7 +71,7 @@
             </p> -->
             <button type = "button" name="submit" id = "add_post">Post</button>
           </form>
-          <br /><br />
+          <br><br>
         </div>
         <div id = "result">
 

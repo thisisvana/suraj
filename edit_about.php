@@ -5,7 +5,7 @@
 
 <?php $layout_context = "admin"; ?>
 <?php include("includes/layouts/header.php"); ?>
-
+<?php include("includes/layouts/navbar.php"); ?>
 <?php
 
   if(ISSET($_GET['submit'])){
@@ -26,7 +26,7 @@
   }
 ?>
   <div class="add-post row">
-      <a href='manage_content.php'>Back</a>
+      <!-- <a href='manage_content.php'>Back</a> -->
 
         <h2>Edit About</h2>
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET" class="admin-form">
@@ -38,8 +38,8 @@
                 if (mysqli_num_rows($result) > 0) {
 
                     while($row = mysqli_fetch_assoc($result)) {
-                        echo "<textarea style='height: 250px; width: 100%; margin: 2rem auto;' name='content' id='area1'>" . $row['about'] . "</textarea>";
-                        echo "<p>Resume:</p><input tupe='text' name='file' value='" . $row['name'] . "'></input>";
+                        echo "<textarea style='height: 350px; width: 90%; margin: 2rem auto;' name='content' id='area1'>" . $row['about'] . "</textarea>";
+                        echo "<p>Resume:</p><input type='text' name='file' value='" . $row['name'] . "'></input>";
                     }
 
                 }

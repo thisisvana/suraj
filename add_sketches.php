@@ -5,18 +5,18 @@
 
 <?php $layout_context = "admin"; ?>
 <?php include("includes/layouts/header.php"); ?>
+<?php include("includes/layouts/navbar.php"); ?>
 
-
-    <div class = "add-post row">
-      <a href='manage_content.php'>Back</a>
+    <div class = "add-post page row">
+      <!-- <a href='manage_content.php'>Back</a> -->
       <h2>add sketches</h2>
 
       <div class = "col-md-3"></div>
       <div class = "col-md-6 well">
         <hr style = "border-top:1px dotted #000;"/>
-        <button class = "btn  btn-primary" id = "btn_post"><span class = "glyphicon glyphicon-plus"></span> Add Post</button>
-        <button style = "display:none;" class = "btn  btn-danger" id = "btn_close"><span class = "glyphicon glyphicon-remove"></span> Close</button>
-        <br /><br />
+        <button class = "btn  btn-primary" id = "btn_post"><span><i class="fa fa-caret-down" aria-hidden="true"></i></span>&nbsp; Add Post</button>
+        <button style = "display:none;" class = "btn  btn-danger" id = "btn_close"><span><i class="fa fa-caret-up" aria-hidden="true"></i></span>&nbsp; Close</button>
+        <br><br>
         <div  style = "display:none;" id = "post_form" class = "col-md-12">
           <form action="add_sketches_process.php" method="post" enctype="multipart/form-data">
 

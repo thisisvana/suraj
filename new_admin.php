@@ -46,25 +46,25 @@ if (isset($_POST['submit'])) {
 
 <?php $layout_context = "admin"; ?>
 <?php include("includes/layouts/header.php"); ?>
-<div id="main">
+<div id="main" class="add-post row">
   <div id="navigation">
     &nbsp;
   </div>
-  <div id="page">
+  <div id="page" class="add-post">
     <?php echo message(); ?>
     <?php echo form_errors($errors); ?>
 
     <h2>Create Admin</h2>
     <form action="new_admin.php" method="post">
-      <p>Username:
+      <p>Username:<br>
         <input type="text" name="username" value="" />
       </p>
-      <p>Password:
+      <p>Password:<br>
         <input type="password" name="password" value="" />
       </p>
-      <input type="submit" name="submit" value="Create Admin" />
+      <input type="submit" class="btn-admin" name="submit" value="Create Admin" />
     </form>
-    <br />
+    <br>
     <a href="manage_admins.php">Cancel</a>
   </div>
 </div>

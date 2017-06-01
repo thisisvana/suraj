@@ -9,12 +9,13 @@
 
 <?php $layout_context = "admin"; ?>
 <?php include("includes/layouts/header.php"); ?>
-<div id="main">
+<div id="main" class="page add-post row">
   <div id="navigation">
-		<br />
-		<a href="admin.php">&laquo; Main menu</a><br />
+
+
   </div>
-  <div id="page">
+  <div id="page" class="add-post page row">
+    <a href="admin.php">&laquo; Main menu</a><br>
     <?php echo message(); ?>
     <h2>Manage Admins</h2>
     <table>

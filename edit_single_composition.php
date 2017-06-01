@@ -41,36 +41,39 @@
  ?>
 
 
-        <div class="add-post row">
+        <div class="add-post page row">
           <a href="edit_compositions.php">Back</a>
             <h2>edit composition</h2>
             <form class="form-admin" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
-                  <?php
+              <?php
 
-                      $id = $_GET['id'];
-                      $sql = "SELECT * FROM compositions WHERE id = $id";
-                      $result = mysqli_query($connection, $sql);
+                  $id = $_GET['id'];
+                  $sql = "SELECT * FROM compositions WHERE id = $id";
+                  $result = mysqli_query($connection, $sql);
 
-                      if (mysqli_num_rows($result) > 0) {
-                          // output data of each row
-                          while($row = mysqli_fetch_assoc($result)) {
-                              echo "<label><span>ID:</span></label>";
-                              echo "<input type='number' name='id' value='" . $row['id'] . "' readonly/>";
-                              echo "<label><span>Title:</span></label>";
-                              echo "<input type='text' name='title' value='" . $row['name'] . "' required /><br><br>";
-                              echo "<label><span>Url link:</span></label>";
+                  if (mysqli_num_rows($result) > 0) {
+                      // output data of each row
+                      while($row = mysqli_fetch_assoc($result)) {
+                          echo "<label><span>ID:</span></label>";
+                          echo "<input type='number' name='id' value='" . $row['id'] . "' readonly/><br><br>";
+                          echo "<label><span>Title:</span></label>";
+                          echo "<label><span>Url link:</span></label>";
+                          echo "<input type='text' name='title' value='" . $row['name'] . "' required /><br><br>";
+                          echo "<label><span>Url link:</span></label>";
 
-                              echo "<input type='text' name='video' value='" . $row['video'] . "' required /><br><br>";
+                          echo "<input type='text' name='video' value='" . $row['video'] . "' required /><br><br>";
 
-                              echo "<label><span>Content:</span></label>";
-                              echo "<textarea style='width:100%' name='content' id='area1'>" . $row['description'] . "</textarea>";
-                          }
+                          echo "<label><span>Content:</span></label>";
+                          echo "<textarea style='width:100%' name='content' id='area1'>" . $row['description'] . "</textarea>";
                       }
+                  }
 
-                ?>
-            <input type="submit" name="submit" value="Update" class="btn-admin edit-blog-submit" />
-            <input type="submit" name="delete" value="Delete" class="btn-admin" />
+            ?>
+            <div class="action-btn">
+              <input type="submit" name="submit" value="Update" class="btn-admin edit-blog-submit" />
+              <input type="submit" name="delete" value="Delete" class="btn-admin" id="del-btn" onclick="return confirm('Are you sure?');"/>
 
+            </div>
         </form>
 
       </div>

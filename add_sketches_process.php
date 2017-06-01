@@ -2,7 +2,7 @@
 <?php require_once("includes/db_connection.php"); ?>
 <?php require_once("includes/functions.php"); ?>
 <?php confirm_logged_in(); ?>
-<div class="row">
+<div class="page row">
 
 <?php
 	// require_once 'connection.php';
@@ -24,7 +24,7 @@
 		<div class = "large-8 column content" style = "word-wrap:break-word; background-color:#fff; padding:20px;">
 			<img style="width:50%;" src="<?php echo $f_post['image'];?>"/>
 			<?php echo '<h4 class = "text-danger">'.$f_post['name'].'</h4>';?>
-			
+
 
 
 		</div>
